@@ -12,12 +12,12 @@
   <tr>
     <td align="center">
         {% for categorie in category %}
-            {{categorie.name}} </br>
+          <a href="@"> {{categorie.name}} </br></a>
         {% endfor %}
     </td>
       <td align="center">
         {% for product in products %}
-   {{product.name}} </br>
+  <a href="produs/?id={{product.id}}"> {{product.name}} </a></br>
 {% endfor %}</td>
   </tr>
 </table>
