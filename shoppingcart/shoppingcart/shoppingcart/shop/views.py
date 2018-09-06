@@ -8,7 +8,8 @@ from .models import Category,Product
 
 def product_list(request):
    products= Product.objects.all()
-   context={'products':products}  #trebuie sa am products in for in template
+   category=Category.objects.all()
+   context={'category':category,'products':products}  #trebuie sa am products in for in template
    return render(request, "list.html", context)
 
 def product_detail(request):
