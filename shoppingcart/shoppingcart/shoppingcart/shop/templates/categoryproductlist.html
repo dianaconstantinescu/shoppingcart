@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table style="width:100%">
+  <tr>
+    <th>Category</th>
+    <th>Products</th>
+  </tr>
+  <tr>
+    <td align="center">
+        {% for categorie in category %}
+          <a href="http://127.0.0.1:8000/shop/category/{{categorie.id}}"> {{categorie.name}} </br></a>
+        {% endfor %}
+    </td>
+      <td align="center">
+        {% for product in products %}
+  <a href="http://127.0.0.1:8000/shop/product/{{product.id}}"> {{product.name}} </a></br>
+{% endfor %}</td>
+  </tr>
+</table>
+</body>
+</html>
